@@ -1,0 +1,10 @@
+﻿NXP Software Content Register
+ 
+Name: an-fxls8974cf-low-power-wake-up-examples
+Version: 1.0
+Outgoing License: LA_OPT_NXP_Software_License v53 December 2023 - Additional Distribution License granted, license in Section 2.3 applies
+License File: LICENSE.txt
+Description: FXLS8974CF SDCD low-power wake up examples for MCX-N9XX-EVK and FRDM-MCXN947.
+Release location: https://github.com/nxp-appcodehub/an-fxls8974cf-low-power-wake-up-examples
+Origin: NXP (BSD-3-Clause)
+        CMSIS (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/releases/tag/5.8.0
