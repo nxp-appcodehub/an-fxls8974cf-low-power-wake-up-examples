@@ -9,10 +9,10 @@ put the sensor back to low-power sleep mode when no-motion is detected for confi
 - Please refer to AN12004 for more information on FXLS8974CF SDCD function. <br>
   https://www.nxp.com/docs/en/application-note/AN12004.pdf
 
+- FXLS8974CF is 3-axis accelerometer targeted for application requiring low-power motion wake up. This ultra-low power wake-up feature on motion can trigger host MCU to wake-up or go back to deep sleep mode when no motion detected autonomously.
+
 - The Sensor Data Change Detection (SDCD) block of FXLS89xx is an efficient and flexible inertial event detection function with the ability to detect inertial events such as motion/no-motion,
-high-g/low-g, tap, freefall and transient acceleration events, etc.
-- The SDCD function within FXLS89xx incorporates a flexible digital window comparator useful for implementing several different
-interrupt event generation functions. Simply stated, the acceleration data input to the SDCD block is compared against a set of user programmable upper and lower thresholds in absolute or relative mode.
+high-g/low-g, tap, freefall and transient acceleration events, etc. Simply stated, the acceleration data input to the SDCD block is compared against a set of user programmable upper and lower thresholds in absolute or relative mode.
 
 - The image below shows the basic inertial motion events detections using SDCD.
 
@@ -33,8 +33,9 @@ interrupt event generation functions. Simply stated, the acceleration data input
 
 ## 1. Software<a name="step1"></a>
 - IoT Sensing SDK (ISSDK) v1.8 offered as middleware in MCUXpresso SDK for supported platforms (https://nxp.com/iot-sensing-sdk)
+- [MCXUpresso SDK 2.14.0 for FRDM-MCXN947](https://mcuxpresso.nxp.com/en/builder?hw=FRDM-MCXN947)
 - MCUXpresso SDK v2.13.1 for MCX-N9XX-EVK (https://mcuxpresso.nxp.com/en/select)
-- MCUXpresso IDE v11.9.0
+- [MCUXpresso IDE v11.9.0 or newer](https://www.nxp.com/design/design-center/software/development-software/mcuxpresso-software-and-tools-/mcuxpresso-integrated-development-environment-ide:MCUXpresso-IDE)
 - Git v2.39.0
 - Teraterm (https://osdn.net/projects/ttssh2/releases/) or RealTerm (https://sourceforge.net/projects/realterm/)
 
@@ -49,8 +50,9 @@ interrupt event generation functions. Simply stated, the acceleration data input
 
 
 ### 3.1 Step 1: Download and Install required Software(s)
-- Install MCUXpresso IDE 2.19.0
-- Download and Install MCXUpresso SDK 2.13.1 for MCX
+- Download [MCUXpresso IDE 2.19.0 or newer](https://www.nxp.com/design/design-center/software/development-software/mcuxpresso-software-and-tools-/mcuxpresso-integrated-development-environment-ide:MCUXpresso-IDE?&tid=vanMCUXPRESSO/IDE) and Install following the installer instructions.
+- Download [MCXUpresso SDK 2.14.0 for FRDM-MCXN947](https://mcuxpresso.nxp.com/en/builder?hw=FRDM-MCXN947), OR
+- Download [MCXUpresso SDK 2.13.1 for MCX-N9xx-EVK](https://mcuxpresso.nxp.com/en/builder?hw=MCX-N9XX-EVK)
 - Install Git v2.39.0 (for cloning and running west commands)
 - RealTerm (for checking examples output)
 
@@ -67,7 +69,12 @@ interrupt event generation functions. Simply stated, the acceleration data input
 - Select example projects that you want to open and run.
 - Right click on project and select build to start building the project.
 
-### 3.4 Step 4: Run example projects
+### 3.4 Step 4: Perform following board settings (in case you are using FRDM-STBI-A8974 shield board)
+- Since the examples use I2C, Pins 2-3 of SW2 on FRDM-STBI-A8974 should be connected.
+- Connect pins 1-2 on jumpers J7 and J8 to select I2C0 on FRDM-STBI-A8974 shield board.
+- SW1 Pins 2-3 should be connected to select default operating mode i.e. "ACCEL NORMAL" mode.
+
+### 3.5 Step 5: Run example projects
 - Connect the chosen example project HW: FRDM-MCXN947 or MCX-N9XX-EVK with FRDM-STBI-A8974 or Accel4 click.
 - Right click on project and select "Debug As". Select MCUXpresso IDE LinkServer (inc. CMSIS DAP) probes.
 - Connect a USB cable between the host PC and the MCU-Link USB port on the target board.

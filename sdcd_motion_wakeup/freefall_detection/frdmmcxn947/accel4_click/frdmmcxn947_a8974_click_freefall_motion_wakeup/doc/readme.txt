@@ -7,12 +7,8 @@ Hardware requirements
 ===================
 - Mini/micro C USB cable
 - FRDM-MCXN947 board
-- Accel4 Click (https://www.mikroe.com/accel-4-click)
+- Accle 4 Click board
 - Personal Computer
-
-Board settings
-============
-Connect Accel4 (FXLS8974CF) MikroE click board to FRDM-MCXN947 MCU on MikroBUS header.
 
 Prepare the Demo
 ===============

@@ -5,7 +5,7 @@
  * Generated linker script file for MCXN947
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.9.0_prc1 [Build 2089] [2023-11-02] on Apr 1, 2024, 5:11:23 PM
+ * MCUXpresso IDE v11.9.1 [Build 2170] [2024-04-19] on Jun 11, 2024, 10:46:04 AM
  */
 
 INCLUDE "frdmmcxn947_a8974_shield_shake_motion_wakeup_Release_library.ld"
@@ -30,22 +30,6 @@ SECTIONS
         *(.rodata.$PROGRAM_FLASH1)
         *(.rodata.$Flash2.*)
         *(.rodata.$PROGRAM_FLASH1.*)            } > PROGRAM_FLASH1
-
-    .text_Flash3 : ALIGN(4)
-    {
-       FILL(0xff)
-        *(.text_Flash3) /* for compatibility with previous releases */
-        *(.text_QSPI_FLASH) /* for compatibility with previous releases */
-        *(.text.$Flash3)
-        *(.text.$QSPI_FLASH)
-        *(.text_Flash3.*) /* for compatibility with previous releases */
-        *(.text_QSPI_FLASH.*) /* for compatibility with previous releases */
-        *(.text.$Flash3.*)
-        *(.text.$QSPI_FLASH.*)
-        *(.rodata.$Flash3)
-        *(.rodata.$QSPI_FLASH)
-        *(.rodata.$Flash3.*)
-        *(.rodata.$QSPI_FLASH.*)            } > QSPI_FLASH
 
     /* MAIN TEXT SECTION */
     .text : ALIGN(4)

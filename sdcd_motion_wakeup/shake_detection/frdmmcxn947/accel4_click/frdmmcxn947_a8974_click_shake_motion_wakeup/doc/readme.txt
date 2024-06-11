@@ -28,18 +28,18 @@ Prepare the Demo
 
 Running the demo
 ===============
-Shake the board up and down 2-3 times to detect shake motion event.
+Tap on the sensor board to detect Tap motion event.
 When the demo runs successfully, you can see the Samples printed to the terminal.
 
- ISSDK FXLS8974CF Example: Wake-Up on Shake Detection & AWS
+ ISSDK FXLS8974CF Example: Wake-Up on Tap Detection & AWS
  Successfully Initialized Timandra with WHO_AM_I = 0x86
- Successfully Applied FXLS8974 SDCD Configuration for Shake Detection
+ Successfully Applied FXLS8974 SDCD Configuration for Tap Detection
 
  ASLP (Auto Sleep) counter expired....
  Sensor Operating Mode Transitioned to Sleep Mode....SYSMODE = 2
  Putting MCU in low power sleep
 
- Shake Motion Detected by Sensor SDCD Block....
+ Tap Motion Detected by Sensor SDCD Block....
  Sensor Operating Mode Transitioned to Wake Mode....SYSMODE = 1
  MCU Woke-up on Tap Motion Event
  Will enter sleep mode after expiration of ASLP counter = ~5sec
